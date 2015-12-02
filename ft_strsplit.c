@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:19:12 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/01 09:33:28 by amoinier         ###   ########.fr       */
+/*   Updated: 2015/12/01 19:14:48 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,8 @@ char			**ft_strsplit(char const *str, char c)
 	if (!str || !c)
 		return (s);
 	tmp = (char *)malloc(sizeof(*tmp) * ft_strlen(str) + 1);
+	if (!tmp)
+		return (s);
 	tmp = ft_cleanstrend(ft_cleanstr(str, c), c);
 	if (tmp[0] == '\0')
 		return (s);
