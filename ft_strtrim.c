@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:27:31 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/01 19:16:38 by amoinier         ###   ########.fr       */
+/*   Updated: 2015/12/02 14:07:27 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ static	char	*ft_ltrim(char *s)
 char			*ft_strtrim(char const *s)
 {
 	if (!s)
+		return (NULL);
+	if (!ft_ltrim(ft_dtrim(s)))
 		return (NULL);
 	return (ft_ltrim(ft_dtrim(s)));
 }
