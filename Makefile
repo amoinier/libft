@@ -6,7 +6,7 @@
 #    By: amoinier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 11:25:20 by amoinier          #+#    #+#              #
-#    Updated: 2015/11/29 13:25:11 by amoinier         ###   ########.fr        #
+#    Updated: 2015/12/03 17:14:43 by amoinier         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -40,7 +40,6 @@ SRC = 		ft_memcmp.c		\
 			ft_isascii.c	\
 			ft_putendl.c	\
 			ft_striteri.c	\
-			ft_strsplit.c	\
 			ft_isdigit.c	\
 			ft_putendl_fd.c	\
 			ft_strjoin.c	\
@@ -70,7 +69,10 @@ SRC = 		ft_memcmp.c		\
 			ft_lstdel.c		\
 			ft_lstadd.c		\
 			ft_lstiter.c	\
-			ft_lstmap.c
+			ft_lstmap.c		\
+			ft_print_tab.c	\
+			ft_strtrimall.c	\
+			ft_freedtab.c
 
 HDR = libft.h
 

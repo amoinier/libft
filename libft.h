@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:14:46 by amoinier          #+#    #+#             */
-/*   Updated: 2015/11/29 14:09:39 by amoinier         ###   ########.fr       */
+/*   Updated: 2015/12/03 16:16:33 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,9 @@ char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+
+void			ft_print_tab(char **tab);
+void			ft_freedtab(char **tab);
+char			*ft_strtrimall(char const *s, char c);
 
 #endif
