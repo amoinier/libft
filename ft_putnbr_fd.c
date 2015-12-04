@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 20:24:22 by amoinier          #+#    #+#             */
-/*   Updated: 2015/11/28 17:15:25 by amoinier         ###   ########.fr       */
+/*   Updated: 2015/12/04 10:58:11 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,6 @@ static	int	ft_val(int n)
 		i++;
 	}
 	return (i);
-}
-
-static	int	ft_power(int nb, int power)
-{
-	int i;
-	int tmp;
-
-	i = 0;
-	tmp = 1;
-	if (power > 0)
-	{
-		while (i < power)
-		{
-			tmp = tmp * nb;
-			i++;
-		}
-		return (tmp);
-	}
-	else if (power == 0)
-		return (1);
-	else
-		return (0);
 }
 
 void		ft_putnbr_fd(int n, int fd)

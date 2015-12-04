@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:52:46 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/03 10:38:45 by amoinier         ###   ########.fr       */
+/*   Updated: 2015/12/04 10:57:35 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,6 @@ static	int		ft_val(int n)
 		i++;
 	}
 	return (i);
-}
-
-static	int		ft_power(int nb, int power)
-{
-	int	i;
-	int	tmp;
-
-	i = 0;
-	tmp = 1;
-	if (power > 0)
-	{
-		while (i < power)
-		{
-			tmp = tmp * nb;
-			i++;
-		}
-		return (tmp);
-	}
-	else if (power == 0)
-		return (1);
-	else
-		return (0);
 }
 
 char			*ft_itoa(int n)
