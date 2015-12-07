@@ -6,7 +6,7 @@
 #    By: amoinier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 11:25:20 by amoinier          #+#    #+#              #
-#    Updated: 2015/12/04 10:52:56 by amoinier         ###   ########.fr        #
+#    Updated: 2015/12/04 11:37:45 by amoinier         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -83,7 +83,7 @@ OFL = $(SRC:.c=.o)
 FLGS = -Wall -Wextra -Werror
 
 $(NAME):
-	@gcc $(FLGS) -c $(SRC)
+	@gcc $(FLGS) -c $(SRC) -I libft.h
 	@ar rc $(NAME) $(OFL)
 	@ranlib $(NAME)
 
