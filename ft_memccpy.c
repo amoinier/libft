@@ -6,12 +6,11 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 21:01:58 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/01 16:12:48 by amoinier         ###   ########.fr       */
+/*   Updated: 2015/12/07 10:30:55 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
