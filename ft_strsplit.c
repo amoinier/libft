@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:19:12 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/01 19:14:48 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/01/06 16:41:52 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static	char	*ft_cleanstr(const char *str, char c)
 	j = 0;
 	if (!str || !c)
 		return (NULL);
-	s = (char *)malloc(sizeof(*s) * ft_strlen(str) + 1);
+	s = (char *)malloc(sizeof(s) * ft_strlen(str) + 1);
 	if (!s)
 		return (NULL);
 	while (str[i] == c)
@@ -47,7 +47,7 @@ static	char	*ft_cleanstrend(const char *str, char c)
 	j = 0;
 	if (!str || !c)
 		return (NULL);
-	s = (char *)malloc(sizeof(*s) * ft_strlen(str) + 1);
+	s = (char *)malloc(sizeof(s) * ft_strlen(str) + 1);
 	if (!s)
 		return (NULL);
 	while (str[ft_strlen(str) - i - 1] == c)
@@ -109,7 +109,7 @@ char			**ft_strsplit(char const *str, char c)
 	char	*tmp;
 	char	**s;
 
-	s = (char **)malloc(sizeof(**s) * ft_count_words(str, c) + 1);
+	s = (char **)malloc(sizeof(s) * ft_count_words(str, c) + 1);
 	if (!s)
 	{
 		s[0] = NULL;
@@ -118,7 +118,7 @@ char			**ft_strsplit(char const *str, char c)
 	s[0] = NULL;
 	if (!str || !c)
 		return (s);
-	tmp = (char *)malloc(sizeof(*tmp) * ft_strlen(str) + 1);
+	tmp = (char *)malloc(sizeof(tmp) * ft_strlen(str) + 1);
 	if (!tmp)
 		return (s);
 	tmp = ft_cleanstrend(ft_cleanstr(str, c), c);

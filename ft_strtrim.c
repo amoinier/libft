@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 18:27:31 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/02 14:07:27 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/01/06 16:42:13 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static	char	*ft_dtrim(char const *s)
 	j = 0;
 	if (!s)
 		return (NULL);
-	tmp = (char *)malloc(sizeof(*tmp) * (ft_strlen(s) + 1));
+	tmp = (char *)malloc(sizeof(tmp) * (ft_strlen(s) + 1));
 	if (tmp == NULL)
 		return (NULL);
 	while (s[i] == 32 || s[i] == '\n' || s[i] == '\t')
@@ -50,7 +50,7 @@ static	char	*ft_ltrim(char *s)
 	len = ft_strlen(s) - 1;
 	i = 0;
 	j = 0;
-	tmp = (char *)malloc(sizeof(*tmp) * (len + 1));
+	tmp = (char *)malloc(sizeof(tmp) * (len + 1));
 	if (!tmp)
 		return (NULL);
 	while (s[len - i] == 32 || s[len - i] == '\n' || s[len - i] == '\t')
