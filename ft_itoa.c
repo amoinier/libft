@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:52:46 by amoinier          #+#    #+#             */
-/*   Updated: 2015/12/04 10:57:35 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/01/22 22:34:33 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,15 @@ char			*ft_itoa(int n)
 
 	i = 0;
 	j = 0;
-	tab = (char*)malloc(sizeof(*tab) * (ft_val(n) + 1));
-	if (!tab)
+	if (!(tab = (char *)malloc(sizeof(char) * (ft_val(n) + 1))))
 		return (NULL);
 	if (n == -2147483648)
-		return (ft_strcpy(tab, "-2147483648"));
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		tab[0] = '-';
 		i++;
-		n = n * (-1);
+		n = -n;
 	}
 	while (j < ft_val(n))
 	{
