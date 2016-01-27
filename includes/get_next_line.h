@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 16:54:47 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/27 15:51:07 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/01/27 16:02:39 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # define BUFF_SIZE 8
 
-# include "libft/includes/libft.h"
+# include "libft.h"
 # include <fcntl.h>
 # include <sys/types.h>
 # include <sys/uio.h>
