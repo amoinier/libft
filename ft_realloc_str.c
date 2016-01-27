@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_realloc_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 16:40:37 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/27 15:23:38 by amoinier         ###   ########.fr       */
+/*   Created: 2016/01/27 15:16:08 by amoinier          #+#    #+#             */
+/*   Updated: 2016/01/27 15:23:14 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strnew(size_t size)
+char		*ft_realloc_str(char *tab, int size)
 {
-	char	*str;
-	size_t	i;
+	char	*tab2;
+	int		x;
 
-	i = 0;
-	size++;
-	if (!(str = (char*)malloc(sizeof(char) * (size))))
+	x = 0;
+	if (!(tab2 = (char *)malloc(sizeof(tab2) * (size + 1))))
 		return (NULL);
-	while (i < size)
+	while (x != size)
 	{
-		str[i] = '\0';
-		i++;
+		tab2[x] = tab[x];
+		x++;
 	}
-	return (str);
+	free(tab);
+	tab = tab2;
+	return (tab);
 }

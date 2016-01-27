@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:52:46 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/27 15:05:15 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/01/27 15:21:24 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static	int		ft_val(int n)
 	return (i);
 }
 
-char			*ft_nbr(int n, int val, int i, char *tab)
+static	char	*ft_nbr(int n, int val, int i, char *tab)
 {
 	int	j;
 	int	power;
