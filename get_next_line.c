@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 17:02:06 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/13 17:21:46 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/01/27 15:57:40 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static	char	*ft_strjoin_free(char *s1, char *s2)
 	char	*tmp;
 
 	tmp = s1;
-	s1 = ft_strjoin(tmp, s2);
+	if (!(s1 = ft_strjoin(tmp, s2)))
+		return (NULL);
 	free(tmp);
-	tmp = NULL;
 	return (s1);
 }
 
@@ -50,14 +50,29 @@ static	int		ft_space(char *s)
 	return (i);
 }
 
+static	int		ft_line(int const fd, char *tmp[fd], char **line)
+{
+	int		spc;
+	char	*tt;
+
+	spc = ft_space(tmp[fd]);
+	*line = ft_strsub(tmp[fd], 0, spc);
+	if (!(tt = (char *)malloc(sizeof(tt) * (ft_strlen(tmp[fd]) + 1))))
+		return (-1);
+	ft_strcpy(tt, &tmp[fd][spc + 1]);
+	ft_strclr(tmp[fd]);
+	tmp[fd] = ft_strcpy(tmp[fd], tt);
+	free(tt);
+	return (1);
+}
+
 int				get_next_line(int const fd, char **line)
 {
-	char			*tt;
 	static	char	*tmp[256];
 
 	if (fd < 0 || !line || BUFF_SIZE < 0 || fd > 256)
 		return (-1);
-	if (!tmp[fd] && (!(tmp[fd] = (char *)malloc(sizeof(tmp[fd]) * (1 + 1)))))
+	if (!tmp[fd] && (!(tmp[fd] = ft_strnew(2))))
 		return (-1);
 	if (ft_stockfile(fd, &(*tmp)) < 0)
 		return (-1);
@@ -66,12 +81,7 @@ int				get_next_line(int const fd, char **line)
 		*line = NULL;
 		return (0);
 	}
-	*line = ft_strsub(tmp[fd], 0, ft_space(tmp[fd]));
-	if (!(tt = (char *)malloc(sizeof(tt) * (ft_strlen(tmp[fd]) + 1))))
+	if (ft_line(fd, tmp, line) < 0)
 		return (-1);
-	ft_strcpy(tt, &tmp[fd][ft_space(tmp[fd]) + 1]);
-	ft_strclr(tmp[fd]);
-	tmp[fd] = ft_strcpy(tmp[fd], tt);
-	free(tt);
 	return (1);
 }
