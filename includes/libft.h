@@ -6,7 +6,7 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:14:46 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/27 14:45:36 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/02/05 19:04:09 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+
+# define BUFF_SIZE 8
 
 typedef	struct	s_list
 {
@@ -95,5 +100,7 @@ char			*ft_strtrimall(char const *s, char c);
 int				ft_power(int nb, int power);
 int				ft_sqrt(int nb);
 int				ft_valabs(int i);
+
+int				get_next_line(int const fd, char **line);
 
 #endif

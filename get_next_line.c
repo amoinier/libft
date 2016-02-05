@@ -6,11 +6,11 @@
 /*   By: amoinier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 17:02:06 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/27 15:57:40 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/02/05 19:04:36 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static	char	*ft_strjoin_free(char *s1, char *s2)
 {
