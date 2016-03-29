@@ -6,7 +6,7 @@
 /*   By: amoinier <amoinier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/21 11:37:15 by amoinier          #+#    #+#             */
-/*   Updated: 2016/01/28 15:42:38 by amoinier         ###   ########.fr       */
+/*   Updated: 2016/03/29 14:03:32 by amoinier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char			**ft_strsplit(const char *str, char c)
 	i = 0;
 	j = 0;
 	wrd = ft_count_words(str, c);
-	if (!(s = (char **)malloc(sizeof(s) * (ft_count_words(str, c) + 2))))
+	if (!(s = (char **)malloc(sizeof(s) * (wrd + 2))))
 		return (NULL);
 	while (str[i] == c && str[i])
 		i++;
