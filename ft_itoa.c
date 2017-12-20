@@ -47,12 +47,10 @@ static	char	*ft_nbr(int n, int val, int i, char *tab)
 char			*ft_itoa(int n)
 {
 	int		i;
-	int		j;
 	char	*tab;
 	int		val;
 
 	i = 0;
-	j = 0;
 	val = ft_val(n);
 	if (n < 0)
 		val++;
